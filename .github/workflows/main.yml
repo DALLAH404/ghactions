@@ -1,0 +1,16 @@
+name: Github Actions Tutorial
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Example-Job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a welcome message
+        run: echo "Welcome to our first Github Actions Workflow"
+
+    
