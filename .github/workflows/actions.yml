@@ -11,7 +11,7 @@ jobs:
         run: echo "This run on the Ubuntu VM"
         
       - name: Run inside Alpine container
-        uses: docker://apline:3.14  # the image must be accessible without authentication
+        uses: docker://alpine:3.14  # the image must be accessible without authentication
         with:
           entrypoint: /bin/sh
           args: |
