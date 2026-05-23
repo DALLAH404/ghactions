@@ -13,4 +13,10 @@ jobs:
       - name: Print a welcome message
         run: echo "Welcome to our first Github Actions Workflow"
 
+      - name: Checkout Repo
+        uses: actions/checkout@v6.0.2
+
+      - name: List Repo files
+        run: ls -la
+
     
