@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+
+
+jobs:
+  hybrid_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a command in Ubuntu VM
+        run: echo "This run on the Ubuntu VM"
+        
+      - name: Run inside Alpine container
+        uses: docker://apline:3.14  # the image must be accessible without authentication
+        with:
+          entrypoint: /bin/sh
+          args: |
+            -c "echo 'This step runs inside an Alpine container'"
+
+      - name: Run another command in Ubuntu VM
+        run: echo "Back to VM"
