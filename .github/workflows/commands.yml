@@ -8,6 +8,6 @@ jobs:
 
     steps:
       - name: Mask custom value
-        run: echo "::add-mask::my-secret"
+        run: ::add-mask::my-secret
       - name: Anything
         run: echo "my-secret"
