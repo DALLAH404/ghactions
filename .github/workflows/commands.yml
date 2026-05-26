@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Mask custom value
+      - name: Mask secret
+        shell: bash {0}
         run: echo "::add-mask::my-secret" >/dev/null
       - name: Anything
         run: echo "my-secret"
